@@ -3,14 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controle de Fretes</title>
-  <link rel="stylesheet" href="src/css/styles.css">
+  <title>Controle de Sistema</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Controle de Fretes</h1>
-
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo da Empresa" class="logo">
+    </div>
+    <h1>Controle de Fretes</h1>
+    <nav class="nav-header-main">
+      <div class="dropdown">
+        <button class="dropbtn">Adicionar Cadastro</button>
+        <div class="dropdown-content">
+          <a href="pages/formAddClientes.html">Clientes</a>
+          <a href="pages/formAddTransport.html">Transportadoras</a>
+          <a href="pages/formAddCarreg.html">Carregamentos</a>
+        </div>
+      </div>
+      <div class="btnAddOrdem">
+        <button class="addOrdem">Adicionar Ordem</button>
+      </div>
+    </nav>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Buscar...">
+      <div class="search-dropdown">
+        <button class="search-btn">Buscar</button>
+        <div class="search-options">
+          <a href="#" onclick="buscar('cliente')">Por Cliente</a>
+          <a href="#" onclick="buscar('transportadora')">Por Transportadora</a>
+          <a href="#" onclick="buscar('carregamento')">Por Carregamento</a>
+        </div>
+      </div>
+    </div>
+  </header>    
+    <main>
+      <div class="container">
+        <h2>Carregamentos...</h2>
+        <!-- Aqui as informações dos carregamentos   -->
+      </div>
+    </main>
   <script type="module" src="src/js/firebaseConfig.js"></script>
-  <script type="module" src="src/js/analytics.js"></script>
   <script type="module" src="src/js/main.js"></script>
+  <script src="pages/js/front.js"></script>
 </body>
 </html>

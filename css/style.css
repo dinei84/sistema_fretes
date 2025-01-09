@@ -1,0 +1,226 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilizando o Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Logo */
+.logo-container {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo {
+    width: 120px; 
+    margin-top: 5px;
+    height: auto;
+}
+
+/* Centralizando o Título */
+header h1 {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    text-align: center;
+    flex-grow: 1; /* Garante que o título ocupe o espaço central */
+}
+
+/* Navegação alinhada à esquerda */
+.nav-header-main {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+/* Navigation */
+.nav-header-main {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Campo de Busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown para Busca */
+.search-dropdown {
+    position: relative;
+}
+
+.search-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.search-options a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-options a:hover {
+    background-color: #f4f4f4;
+}
+
+.search-dropdown:hover .search-options {
+    display: block;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #00923f;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #00923f;
+}
+
+/* Add Order Button */
+.btnAddOrdem .addOrdem {
+    background-color: white;
+    color: 00923f;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnAddOrdem .addOrdem:hover {
+    background-color: #00923f;
+}
+
+/* Main */
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-header-main {
+        flex-direction: column;
+    }
+
+    .btnAddOrdem {
+        margin-top: 1rem;
+    }
+}
