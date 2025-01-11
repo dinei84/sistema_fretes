@@ -1,46 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
 }
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
 }
-.container h2 {
-    margin-bottom: 20px;
-}
-.container label {
-    display: block;
-    margin-bottom: 5px;
-}
-.container input {
+
+header {
+    background-color: #00923f;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    margin-top: 80px; /* Espaço para o header fixo */
+    padding: 20px;
+    max-width: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.3s;
 }
-.container button {
-    width: 48%;
-    padding: 10px;
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    border-color: #00923f;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-.container .submit-btn {
-    background-color: #4CAF50;
+
+.submit-btn {
+    background-color: #00923f;
     color: white;
 }
-.container .back-btn {
-    background-color: #f44336;
+
+.back-btn {
+    background-color: #6c757d;
     color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .back-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .back-btn {
+        margin-bottom: 0;
+    }
 }
